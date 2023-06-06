@@ -20,14 +20,14 @@ jobs:
           with:
             distribution: temurin
             java-version: 19
-        - name: Setup Gradle
+        - name: Build project
           uses: gradle/gradle-build-action@v2
           env:
             CI: true
           with:
             gradle-version: 7.6
             arguments: assemble
-        - name: Setup Gradle
+        - name: Test Project
           uses: gradle/gradle-build-action@v2
           env:
             CI: true
