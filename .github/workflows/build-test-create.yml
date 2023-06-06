@@ -93,4 +93,4 @@ jobs:
           - run: |
                 gh workflow --repo bisegni/test-deploy-workflow run start_deployment -f deployment_image="${{needs.build-docker-images.outputs.IMAGE_TO_DEPLOY}} "
             env:
-                GITHUB_TOKEN: ${{ secrets.TRIGGER_WORKFLOW_SECRET }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
