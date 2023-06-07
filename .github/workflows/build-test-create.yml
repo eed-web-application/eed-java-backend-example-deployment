@@ -42,14 +42,14 @@ jobs:
           env:
             CI: true
           with:
-            gradle-version: 7.6
+            gradle-version: 8.1
             arguments: assemble
         - name: Test Project
           uses: gradle/gradle-build-action@v2
           env:
             CI: true
           with:
-            gradle-version: 7.6
+            gradle-version: 8.1
             arguments: test
         - name: Uplaod artifact
           uses: actions/upload-artifact@v3
