@@ -41,7 +41,7 @@ jobs:
           env:
             CI: true
           run: |
-            ./gradlew assemble
+            ./gradlew assemble --stacktrace
         - name: Test Project
           env:
             CI: true
