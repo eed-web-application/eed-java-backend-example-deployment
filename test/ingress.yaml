@@ -15,6 +15,6 @@ spec:
         path: /ejbe(.*)
         backend:
           service:
-            name: eed-java-backend-example
+            name: eed-java-backend-example-service
             port: 
               number: 8080
