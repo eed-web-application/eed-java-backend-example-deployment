@@ -38,19 +38,15 @@ jobs:
             distribution: temurin
             java-version: 19
         - name: Build project
-          uses: gradle/gradle-build-action@v2
           env:
             CI: true
-          with:
-            gradle-version: 8.1
-            arguments: assemble
+          run: |
+            ./gradlew assemble
         - name: Test Project
-          uses: gradle/gradle-build-action@v2
           env:
             CI: true
-          with:
-            gradle-version: 8.1
-            arguments: test
+          run: |
+            ./gradlew test
         - name: Uplaod artifact
           uses: actions/upload-artifact@v3
           with:
