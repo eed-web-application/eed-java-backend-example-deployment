@@ -31,22 +31,26 @@ jobs:
         - name: Manage Version
           run: |
             echo "Modify build.gradle for with version number \"$GitVersion_Major.$GitVersion_Minor.$GitVersion_Patch\""
-            sed -i "s#^.*version.*#version = '$GitVersion_Major.$GitVersion_Minor.$GitVersion_Patch'#" build.gradle
+            sed -i "s#^.*version.*=.*#version = '$GitVersion_Major.$GitVersion_Minor.$GitVersion_Patch'#" build.gradle
             cat build.gradle
         - uses: actions/setup-java@v3
           with:
             distribution: temurin
             java-version: 19
         - name: Build project
+          uses: gradle/gradle-build-action@v2
           env:
             CI: true
-          run: |
-            ./gradlew assemble --stacktrace
+          with:
+            gradle-version: 8.1
+            arguments: assemble
         - name: Test Project
+          uses: gradle/gradle-build-action@v2
           env:
             CI: true
-          run: |
-            ./gradlew test
+          with:
+            gradle-version: 8.1
+            arguments: test
         - name: Uplaod artifact
           uses: actions/upload-artifact@v3
           with:
