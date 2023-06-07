@@ -5,3 +5,4 @@ resources:
 - config-map.yaml
 - docker-config-secrets.yaml
 - deployment.yaml
+- ingress.yaml
