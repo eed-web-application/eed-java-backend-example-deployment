@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-test-deployment-ingress
+  name: eed-java-backend-example-ingress
   annotations:
     ingress.kubernetes.io/rewrite-target: /$1
   labels:
