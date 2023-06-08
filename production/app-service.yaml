@@ -7,4 +7,5 @@ spec:
     app: eed-java-backend-example
   ports:
     - protocol: TCP
-      port: 8080
+      port: 80
+      TargetPort: 8080
