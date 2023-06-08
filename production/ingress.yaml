@@ -4,6 +4,7 @@ metadata:
   name: eed-java-backend-example
   annotations:
     ingress.kubernetes.io/rewrite-target: /$2
+    ingress.kubernetes.io/use-regex: "true"
   labels:
     name: eed-java-backend-example
 spec:
