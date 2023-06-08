@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eed-java-backend-example
+  labels:
+    app: eed-java-backend-example
   annotations:
     prometheus.io/scrape: 'true'
     prometheus.io/path: '/metrics'
