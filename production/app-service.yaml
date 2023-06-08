@@ -6,6 +6,7 @@ spec:
   selector:
     app: eed-java-backend-example
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
-      TargetPort: 8080
+      tragetPort: 8080
