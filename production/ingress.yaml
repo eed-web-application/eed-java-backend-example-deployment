@@ -3,8 +3,8 @@ kind: Ingress
 metadata:
   name: eed-java-backend-example
   annotations:
-    ingress.kubernetes.io/rewrite-target: /$2
-    ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: "true"
   labels:
     name: eed-java-backend-example
 spec:
@@ -13,7 +13,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /ejbe(/|$)(.*)
+        path: /ejbe/(.*)
         backend:
           service:
             name: eed-java-backend-example
