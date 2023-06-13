@@ -22,7 +22,7 @@ spec:
       containers:
       - name: eed-java-backend-example
         imagePullPolicy: Always
-        image: ghcr.io/eed-web-application/eed-java-backend-example:sha-647c843
+        image: ghcr.io/eed-web-application/eed-java-backend-example:sha-15d057c
         envFrom:
         - configMapRef:
             name: env-config-map
