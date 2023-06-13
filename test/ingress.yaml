@@ -8,7 +8,7 @@ metadata:
     name: eed-java-backend-example-ingress
 spec:
   rules:
-  - host: "eed-app.slac.stanford.edu"
+  - host: "accel-webapp-dev.slac.stanford.edu"
     http:
       paths:
       - pathType: Prefix
