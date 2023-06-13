@@ -6,7 +6,7 @@ metadata:
     app: eed-java-backend-example
   annotations:
     prometheus.io/scrape: 'true'
-    prometheus.io/path: '/metrics'
+    prometheus.io/path: '/actuator/prometheus'
     prometheus.io/port: '8080'
 spec:
   replicas: 1
