@@ -4,10 +4,6 @@ metadata:
   name: eed-java-backend-example
   labels:
     app: eed-java-backend-example
-  annotations:
-    prometheus.io/scrape: 'true'
-    prometheus.io/path: '/actuator/prometheus'
-    prometheus.io/port: '8080'
 spec:
   replicas: 1
   selector:
@@ -17,6 +13,11 @@ spec:
     metadata:
       labels:
         app: eed-java-backend-example
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io.scheme: 'http'
+        prometheus.io/path: '/actuator/prometheus'
+        prometheus.io/port: '8080'
     spec:
       containers:
       - name: eed-java-backend-example
